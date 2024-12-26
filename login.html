@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - VoyageVista</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('bg.jpg'); /* Background image */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(52, 58, 64, 0.8);
+      padding: 15px 30px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: #d4d4d4;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f8f9fa;
+    }
+
+    /* Login Form */
+    .login-container {
+      max-width: 500px;
+      margin: 100px auto;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .login-container h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #343a40;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .login-container input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .login-container input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .login-container a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .login-container a:hover {
+      color: #0056b3;
+    }
+
+    /* Bottom Description */
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Tourism Management</div>
+    <div>
+      <a href="tour.html">Home</a> <!-- Link to go back to homepage -->
+    </div>
+  </nav>
+
+  <!-- Login Form Container -->
+  <div class="login-container">
+    <h2>Login to VoyageVista</h2>
+    
+    <!-- Login Form -->
+    <form action="dashboard.html" method="post">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="submit" value="Login">
+    </form>
+    
+    <!-- Forgot Password and Sign Up Links -->
+    <div>
+      <a href="forgot-password.html">Forgot Password?</a> | 
+      <a href="signup.html">Looking to Register? Sign Up</a>
+    </div>
+
+    <!-- Footer Description -->
+    <div class="footer">
+      <p>Welcome to VoyageVista! Your travel companion for exploring the world. We help you plan your next great adventure.</p>
+    </div>
+  </div>
+
+</body>
+</html>

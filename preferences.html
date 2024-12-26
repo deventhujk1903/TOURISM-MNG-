@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preferences of Places</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #343a40;
+      margin-bottom: 20px;
+    }
+
+    .preference-item {
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+    .preference-item img {
+      width: 20%;
+      height: 20vh;
+      border-radius: 8px;
+    }
+
+    .preference-name {
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    .places-list {
+      display: none;
+      text-align: center;
+      margin-top: 10px;
+      padding-left: 20px;
+      font-style: italic;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .places-list li {
+      list-style-type: none;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function togglePlacesList(id) {
+      const list = document.getElementById(id);
+      list.style.display = list.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function showPlaceImage(imgId, place) {
+      const imgElement = document.getElementById(imgId);
+      imgElement.src = place;
+    }
+
+    function resetPlaceImage(imgId, defaultImg) {
+      const imgElement = document.getElementById(imgId);
+      imgElement.src = defaultImg;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Preferences of Places</h2>
+
+    <div class="preference-item" onclick="togglePlacesList('beaches-list')">
+      <div class="preference-name">Beautiful Beaches</div>
+      <!-- Main image for "Beautiful Beaches" -->
+      <img id="beach-main-img" src="beach.jpg" alt="Beautiful Beaches" class="center">
+      <ul id="beaches-list" class="places-list">
+        <li onmouseover="showPlaceImage('beach-main-img', 'shang.jpg')" onmouseout="resetPlaceImage('beach-main-img', 'beach.jpg')">Shanghumugham Beach</li>
+        <li onmouseover="showPlaceImage('beach-main-img', 'kovalam-beach.jpg')" onmouseout="resetPlaceImage('beach-main-img', 'beach.jpg')">Kovalam Beach</li>
+        <li onmouseover="showPlaceImage('beach-main-img', 'veli.jpg')" onmouseout="resetPlaceImage('beach-main-img', 'beach.jpg')">Veli Tourist Village</li>
+        <li onmouseover="showPlaceImage('beach-main-img', 'azhimala.jpg')" onmouseout="resetPlaceImage('beach-main-img', 'beach.jpg')">Azhimala Beach</li>
+        <li onmouseover="showPlaceImage('beach-main-img', 'vizhinjam.jpg')" onmouseout="resetPlaceImage('beach-main-img', 'beach.jpg')">Vizhinjam Beach</li>
+        <li onmouseover="showPlaceImage('beach-main-img', 'poovar.jpg')" onmouseout="resetPlaceImage('beach-main-img', 'beach.jpg')">Poovar Island</li>
+        <li onmouseover="showPlaceImage('beach-main-img', 'perumathura.jpg')" onmouseout="resetPlaceImage('beach-main-img', 'beach.jpg')">Perumathura Beach</li>
+        <li onmouseover="showPlaceImage('beach-main-img', 'thumba.jpg')" onmouseout="resetPlaceImage('beach-main-img', 'beach.jpg')">Thumba Beach</li>
+        <li onmouseover="showPlaceImage('beach-main-img', 'panathura.jpg')" onmouseout="resetPlaceImage('beach-main-img', 'beach.jpg')">Panathura Beach</li>
+        <li onmouseover="showPlaceImage('beach-main-img', 'anchuthengu.jpg')" onmouseout="resetPlaceImage('beach-main-img', 'beach.jpg')">Anchuthengu Beach</li>
+      </ul>
+    </div>
+
+    <!-- Add similar structures for other preference items if needed -->
+    <div class="preference-item" onclick="togglePlacesList('mount-list')">
+      <div class="preference-name">Mountain Hikes</div>
+      <!-- Main image for "Beautiful Beaches" -->
+      <img id="mount-main-img" src="mountains.jpg" alt="Mountain Hikes" class="center">
+      <ul id="mount-list" class="places-list">
+        <li onmouseover="showPlaceImage('mount-main-img', 'agas.jpg')" onmouseout="resetPlaceImage('mount-main-img', 'mountains.jpg')">Agasthyakoodam</li>
+        <li onmouseover="showPlaceImage('mount-main-img', 'pon.jpg')" onmouseout="resetPlaceImage('mount-main-img', 'mountains.jpg')">Ponmudi Hills</li>
+        <li onmouseover="showPlaceImage('mount-main-img', 'veli.jpg')" onmouseout="resetPlaceImage('mount-main-img', 'mountains.jpg')">Vazhvanthol Waterfalls Trek</li>
+        <li onmouseover="showPlaceImage('mount-main-img', 'azhimala.jpg')" onmouseout="resetPlaceImage('mount-main-img', 'mountains.jpg')">Meenmutty Waterfalls Trek</li>
+        <li onmouseover="showPlaceImage('mount-main-img', 'vizhinjam.jpg')" onmouseout="resetPlaceImage('mount-main-img', 'mountains.jpg')">Brahmagiri Hills</li>
+        <li onmouseover="showPlaceImage('mount-main-img', 'poovar.jpg')" onmouseout="resetPlaceImage('mount-main-img', 'mountains.jpg')">Varayadumotta Peak</li>
+        <li onmouseover="showPlaceImage('mount-main-img', 'perumathura.jpg')" onmouseout="resetPlaceImage('mount-main-img', 'mountains.jpg')">Bonacaud</li>
+        <li onmouseover="showPlaceImage('mount-main-img', 'thumba.jpg')" onmouseout="resetPlaceImage('mount-main-img', 'mountains.jpg')">Neyyar Dam Trek</li>
+        <li onmouseover="showPlaceImage('mount-main-img', 'panathura.jpg')" onmouseout="resetPlaceImage('mount-main-img', 'mountains.jpg')">Kalippara Trek</li>
+        <li onmouseover="showPlaceImage('mount-main-img', 'anchuthengu.jpg')" onmouseout="resetPlaceImage('mount-main-img', 'mountains.jpg')">Peppara Wildlife Sanctuary</li>
+      </ul>
+    </div>
+
+    <div class="preference-item" onclick="togglePlacesList('city-list')">
+      <div class="preference-name">City Tours</div>
+      <!-- Main image for "Beautiful Beaches" -->
+      <img id="city-main-img" src="city.jpg" alt="City Tours" class="center">
+      <ul id="city-list" class="places-list">
+        <li onmouseover="showPlaceImage('city-main-img', 'napier.jpg')" onmouseout="resetPlaceImage('city-main-img', 'city.jpg')">Napier Museum</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'zoo.jpg')" onmouseout="resetPlaceImage('city-main-img', 'city.jpg')">Thiruvananthapuram Zoo</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'veli.jpg')" onmouseout="resetPlaceImage('city-main-img', 'city.jpg')">Padmanabhaswamy Temple</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'azhimala.jpg')" onmouseout="resetPlaceImage('city-main-img', 'city.jpg')">Kanakakunnu Palace</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'vizhinjam.jpg')" onmouseout="resetPlaceImage('city-main-img', 'city.jpg')">Kerala Science and Technology Museum</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'poovar.jpg')" onmouseout="resetPlaceImage('city-main-img', 'city.jpg')">Priyadharshini Planetarium</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'perumathura.jpg')" onmouseout="resetPlaceImage('city-main-img', 'city.jpg')">Kuthiramalika Palace Museum</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'thumba.jpg')" onmouseout="resetPlaceImage('city-main-img', 'city.jpg')">Chalai Bazaar</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'panathura.jpg')" onmouseout="resetPlaceImage('city-main-img', 'city.jpg')">Attukal Temple</li>
+  
+      </ul>
+    </div>
+    <div class="preference-item" onclick="togglePlacesList('hist-list')">
+      <div class="preference-name">Historical Landmarks</div>
+      <!-- Main image for "Beautiful Beaches" -->
+      <img id="hist-main-img" src="landmark.jpg" alt="Historical Landmarks" class="center">
+      <ul id="hist-list" class="places-list">
+        <li onmouseover="showPlaceImage('hist-main-img', 'kuthira.webp')" onmouseout="resetPlaceImage('hist-main-img', 'landmark.jpg')">Kuthiramalika Palace Museum</li>
+        <li onmouseover="showPlaceImage('hist-main-img', 'anju.jpg')" onmouseout="resetPlaceImage('hist-main-img', 'landmark.jpg')">Anchuthengu Fort</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'veli.jpg')" onmouseout="resetPlaceImage('hist-main-img', 'landmark.jpg')">East Fort</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'azhimala.jpg')" onmouseout="resetPlaceImage('hist-main-img', 'landmark.jpg')">Vizhinjum Rock Cut Cave Temple</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'vizhinjam.jpg')" onmouseout="resetPlaceImage('hist-main-img', 'landmark.jpg')">Neyyar Dam</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'poovar.jpg')" onmouseout="resetPlaceImage('hist-main-img', 'landmark.jpg')">Beemapally Mosque</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'perumathura.jpg')" onmouseout="resetPlaceImage('hist-main-img', 'landmark.jpg')">Varkala Cliff</li>
+        <li onmouseover="showPlaceImage('city-main-img', 'thumba.jpg')" onmouseout="resetPlaceImage('hist-main-img', 'landmark.jpg')">Napier Museum</li>
+        
+      </ul>
+    </div>
+    <div class="preference-item" onclick="togglePlacesList('park-list')">
+      <div class="preference-name">Adventure Parks</div>
+      <!-- Main image for "Beautiful Beaches" -->
+      <img id="park-main-img" src="adventure.jpg" alt="Adventure Parks" class="center">
+      <ul id="park-list" class="places-list">
+        <li onmouseover="showPlaceImage('park-main-img', 'magic.jpg')" onmouseout="resetPlaceImage('park-main-img', 'adventure.jpg')">Magic Planet</li>
+        <li onmouseover="showPlaceImage('park-main-img', 'happy.jpg')" onmouseout="resetPlaceImage('park-main-img', 'adventure.jpg')">Happyland Water Theme Mark</li>
+        <li onmouseover="showPlaceImage('park-main-img', 'veli.jpg')" onmouseout="resetPlaceImage('park-main-img', 'adventure.jpg')">Adventure Zone </li>
+        <li onmouseover="showPlaceImage('park-main-img', 'azhimala.jpg')" onmouseout="resetPlaceImage('park-main-img', 'adventure.jpg')">Neyyar Dam Boating</li>
+        <li onmouseover="showPlaceImage('park-main-img', 'vizhinjam.jpg')" onmouseout="resetPlaceImage('park-main-img', 'adventure.jpg')">Akkulam Tourist Village</li>
+        <li onmouseover="showPlaceImage('park-main-img', 'poovar.jpg')" onmouseout="resetPlaceImage('park-main-img', 'adventure.jpg')">Kallar Eco Tourism</li>
+        <li onmouseover="showPlaceImage('park-main-img', 'perumathura.jpg')" onmouseout="resetPlaceImage('park-main-img', 'adventure.jpg')">Kovalam Adventure Activities</li>
+        <li onmouseover="showPlaceImage('park-main-img', 'thumba.jpg')" onmouseout="resetPlaceImage('park-main-img', 'adventure.jpg')">Green Valley Adventures</li>
+        
+      </ul>
+    </div>
+  </div>
+  <style>
+    body {
+      background-image: url(bg1.jpg);
+    }
+  </style>
+</body>
+</html>
